@@ -1,10 +1,10 @@
-# Simple MITM
+# Simple Sockets
 
-This script is meant to be used as a way to capture raw data communications between two hosts or applications.
+This script is meant to be used as a way to capture raw data communications between systems which are in your control.  This script is more of a practice exercise than an everyday tool.
 
-Example use: intercepting communication between a web front end client which interacts with a back end application for the purpose of reverse engineering a custom protocol.
+Example use: intercepting communication between a web application front end and a back end program for the purpose of reverse engineering the custom protocol used.
   
 Usage:
 ```bash
-$ python simple-mitm.py <remote ip> <remote port> <local port>
+$ python simple-sokets.py <remote ip> <remote port> <local port>
 ```
