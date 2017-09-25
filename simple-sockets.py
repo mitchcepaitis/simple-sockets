@@ -23,7 +23,7 @@ def close_sockets_and_exit():
   sys.exit()
 
 
-def host_a_to_mitm_to_host_b(host_a, host_b):
+def host_a_to_capture_to_host_b(host_a, host_b):
   """Receive data on local listening connection and send to remote connection"""
   try:
     data = c.recv(1024)
@@ -41,8 +41,9 @@ def host_a_to_mitm_to_host_b(host_a, host_b):
 
 
 
-def host_b_to_mitm_to_host_a(host_a, host_b):
-  """Receive data from remote connection and send to local listening connection"""
+def host_b_to_capture_to_host_a(host_a, host_b):
+  """Receive data from remote connection, capture it, and forward 
+  to local listening connection"""
   try:
     data = s.recv(1024)
     capture.append(host_b + ": " + str(binascii.hexlify(data)))
@@ -118,9 +119,9 @@ def main():
       break
     if r:
       if r == c:
-        host_a_to_mitm_to_host_b(host_a, host_b)
+        host_a_to_capture_to_host_b(host_a, host_b)
       elif r == s:
-        host_b_to_mitm_to_host_a(host_a, host_b)
+        host_b_to_capture_to_host_a(host_a, host_b)
     else:
       break
 
