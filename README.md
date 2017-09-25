@@ -1,8 +1,6 @@
 # Simple Sockets
 
-This script is meant to be used as a way to capture raw data communications between systems which are in your control.  This script is more of a practice exercise than an everyday tool.
-
-Example use: intercepting communication between a web application front end and a back end program for the purpose of reverse engineering the custom protocol used.
+This script was created as an exercise to solve a custom protocol reverse engineering challenge.  While there are existing MITM type tools, this script was a good practice in socket programming and text handling.
   
 Usage:
 ```bash
