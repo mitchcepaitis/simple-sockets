@@ -6,5 +6,5 @@ Example use: intercepting communication between a web application front end and 
   
 Usage:
 ```bash
-$ python simple-sokets.py <remote ip> <remote port> <local port>
+$ python simple-sockets.py <remote ip> <remote port> <local port>
 ```
